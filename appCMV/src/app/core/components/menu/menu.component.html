@@ -1,0 +1,23 @@
+<mat-nav-list fxLayout="column" fxLayoutAlign="space-between">
+    <div>
+        <!-- Contiene cada una de las opciones del menu, debe renderizarse las veces que sea necesario -->
+        <mat-list-item *ngFor="let menu of listMenu">
+            <!-- Obtene el contenido de la variable URL -->
+            <a [routerLink]="menu.url">
+                <button mat-icon-button>
+                    <img [src]="menu.icon" alt="">
+                    <span>{{menu.title}}</span>
+                </button>
+            </a>
+        </mat-list-item>
+    </div>
+
+    <div>
+        <mat-list-item>
+            <button mat-icon-button color="accent" (click)="toggleExpanded()">
+                <mat-icon *ngIf="expanded">arrow_back_ios</mat-icon>
+                <mat-icon *ngIf="!expanded">arrow_forward_ios</mat-icon>
+            </button>
+        </mat-list-item>
+    </div>
+</mat-nav-list>
