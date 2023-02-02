@@ -23,8 +23,7 @@ export class TableComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   // Añadido
   ngOnChanges(changes: SimpleChanges) {

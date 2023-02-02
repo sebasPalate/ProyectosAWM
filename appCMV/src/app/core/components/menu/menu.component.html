@@ -3,7 +3,7 @@
         <!-- Contiene cada una de las opciones del menu, debe renderizarse las veces que sea necesario -->
         <mat-list-item *ngFor="let menu of listMenu">
             <!-- Obtene el contenido de la variable URL -->
-            <a [routerLink]="menu.url">
+             <a [routerLink]="menu.url">
                 <button mat-icon-button>
                     <img [src]="menu.icon" alt="">
                     <span>{{menu.title}}</span>

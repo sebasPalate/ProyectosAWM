@@ -25,9 +25,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     TitleComponent,
@@ -43,12 +40,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatToolbarModule,
     MatCardModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatButtonModule,
-    MatIconModule,
     MatTooltipModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatButtonModule
   ],
   exports: [
     TitleComponent,
@@ -64,7 +61,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatBottomSheetModule,
     DownloadComponent,
     MatListModule,
-    MatToolbarModule,
     MatDialogModule,
     ReactiveFormsModule,
     MatFormFieldModule,

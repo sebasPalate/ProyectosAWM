@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cursos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro de Cursos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Titulo</ion-label>
+        <ion-input [(ngModel)]="curso.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Subtitulo</ion-label>
+        <ion-input [(ngModel)]="curso.subtitle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Duración</ion-label>
+        <ion-input [(ngModel)]="curso.duration"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="curso.description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Imagen</ion-label>
+        <ion-input [(ngModel)]="curso.urlImage"></ion-input>
+      </ion-item>
+      <ion-button color="primary" expand="full" (click)="registrarCurso(curso)">Registrar</ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

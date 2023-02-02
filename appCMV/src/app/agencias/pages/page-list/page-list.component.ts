@@ -5,13 +5,13 @@ import { KeypadButton } from 'src/app/share/interfaces/keypad.interface';
 import { MetaDataColumn } from 'src/app/share/interfaces/metacolumn.interfaces';
 import { environment } from 'src/environments/environment';
 
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
-import { AgencyServiceService } from 'src/app/services/agency.service';
 import { AgenciaService } from '../../services/agencia.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FomrComponent } from '../../components/fomr/fomr.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
@@ -151,24 +151,4 @@ export class PageListComponent implements OnInit {
   showMessage(message: string, duration: number = 5000) {
     this.snackbar.open(message, '', { duration });
   }
-
-  /*  openPdpTables() {
-     const documentDefinition = {
-       content: [
-         {
-           table: {
-             headerRows: 1,
-             widths: ['*', '*', '*'],
-             body: [
-               [this.metaDataColumns[0].title, this.metaDataColumns[1].title, this.metaDataColumns[2].title],
-               ...this.records.map((item) => [item._id, item.name, item.address])
-             ]
-           }
-         }
-       ]
-     };
-     pdfMake.createPdf(documentDefinition).open();
-     // Fin
- 
-   } */
 }

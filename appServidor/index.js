@@ -24,5 +24,7 @@ app.get('/', (req, res) => {
 
 // Como se va hacer referencia desde el servidor
 app.use('/api/agencias', require('./routes/agencyRoutes'));
+app.use('/api/matriculas', require('./routes/matriculaRoutes'));
+app.use('/api/cursos', require('./routes/courseRoute'));
 
 app.listen(4500, () => { console.log('Servidor en el puerto 4500') });

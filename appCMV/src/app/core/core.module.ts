@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { LoginComponent } from './components/login/login.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';

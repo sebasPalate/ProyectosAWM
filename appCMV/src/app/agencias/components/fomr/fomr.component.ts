@@ -32,5 +32,4 @@ export class FomrComponent implements OnInit {
     const record = this.group.value;
     this.reference.close(record);
   }
-
 }
