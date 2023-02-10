@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../services/course.service';
 import { Curso } from '../models/course';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
@@ -11,8 +12,10 @@ import { AlertController } from '@ionic/angular';
 export class CursosPage implements OnInit {
 
   cursos: any = [];
-  constructor(private courseService: CourseService,
-    private alertController: AlertController) { }
+  constructor(
+    private courseService: CourseService,
+    private alertController: AlertController,
+    private navController: NavController) { }
 
   ngOnInit() {
   }
@@ -52,4 +55,23 @@ export class CursosPage implements OnInit {
     )
     alert.present()
   }
+
+/*   async editarCurso(curso: Curso) {
+    this.route.navigate(['/registro'], { queryParams: curso })
+
+    this.courseService.actualizarCurso(curso._id, curso).subscribe(
+      (res) => {
+        this.cursos = res;
+      }, (err) => console.log(err)
+    )
+  } */
+
+  abrirFormulario(curso: Curso) {
+    this.navController.navigateForward(['/registro', curso._id])
+  }
+
+  abrirFormularioRegistro(){
+    this.navController.navigateForward(['/registro', 'nuevo'])
+  }
 }
+

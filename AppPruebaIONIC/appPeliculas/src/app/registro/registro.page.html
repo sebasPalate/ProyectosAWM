@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/peliculas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Películas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-item fill="outline">
+        <ion-label position="floating">Titulo</ion-label>
+        <ion-input [clearInput]="true" [(ngModel)]="pelicula.title" value="pelicula.name"></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Categoría</ion-label>
+          <ion-select [(ngModel)]="pelicula.category">
+            <ion-select-option value="Accion">Accion</ion-select-option>
+            <ion-select-option value="Drama">Drama</ion-select-option>
+            <ion-select-option value="Comedia">Comedia</ion-select-option>
+            <ion-select-option value="Aventuras">Aventuras</ion-select-option>
+            <ion-select-option value="Fantasía">Fantasía</ion-select-option>
+            <ion-select-option value="Ciencia Ficción">Ciencia Ficción</ion-select-option>
+            <ion-select-option value="Terror">Terror</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-item counter="true">
+        <ion-label position="floating">Descripcion</ion-label>
+        <ion-textarea [(ngModel)]="pelicula.description" maxlength="80"></ion-textarea>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="floating">Año</ion-label>
+        <ion-input  [clearInput]="true" [(ngModel)]="pelicula.year"></ion-input>
+      </ion-item> -->
+
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Año</ion-label>
+          <ion-select [(ngModel)]="pelicula.year">
+            <ion-select-option value="2022">2022</ion-select-option>
+            <ion-select-option value="2021">2021</ion-select-option>
+            <ion-select-option value="2020">2020</ion-select-option>
+            <ion-select-option value="2019">2019</ion-select-option>
+            <ion-select-option value="2018">2018</ion-select-option>
+            <ion-select-option value="2017">2017</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Imagen</ion-label>
+        <ion-input [clearInput]="true" [(ngModel)]="pelicula.image"></ion-input>
+      </ion-item>
+      <ion-button color="primary" expand="full" shape="round" (click)="registrarPelicula(pelicula)">Añadir</ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

@@ -17,7 +17,7 @@ export class CourseService {
   }
 
   obtenerCurso(id: String) {
-    return this.http.get(`${this.api} / ${id}`);
+    return this.http.get(`${this.api}/${id}`);
   }
 
   ingresarCurso(curso: Curso) {

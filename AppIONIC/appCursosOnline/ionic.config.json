@@ -1,5 +1,7 @@
 {
   "name": "appCursosOnline",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

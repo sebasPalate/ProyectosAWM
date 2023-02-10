@@ -26,5 +26,6 @@ app.get('/', (req, res) => {
 app.use('/api/agencias', require('./routes/agencyRoutes'));
 app.use('/api/matriculas', require('./routes/matriculaRoutes'));
 app.use('/api/cursos', require('./routes/courseRoute'));
+app.use('/api/peliculas', require('./routes/movieRoute'));
 
 app.listen(4500, () => { console.log('Servidor en el puerto 4500') });
