@@ -1,0 +1,7 @@
+.head {
+    font-size: 20px;
+}
+
+.hightline:hover {
+    background-color: rgba(140, 41, 194, 0.1);
+}
